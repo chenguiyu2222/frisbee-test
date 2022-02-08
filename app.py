@@ -1,3 +1,4 @@
+# -*- coding: cp936 -*-
 import plotly.express as px
 import dash
 import dash_core_components as dcc
@@ -15,11 +16,11 @@ fig = px.scatter_mapbox(df, text = 'text',lat="lat84", lon="lon84",  size_max=30
 fig.update_layout(mapbox_style="dark", mapbox_accesstoken=token)
 
 app = dash.Dash()
-
+server = app.server
 app.layout = html.Div(
     dbc.Container(
         [
-            html.H1('å›½å†…é£ç›˜é˜Ÿä¼ç»„ç»‡åˆ†å¸ƒå›¾'),
+            html.H1('¹úÄÚ·ÉÅÌ¶ÓÎé×éÖ¯·Ö²¼Í¼'),
             dcc.Graph(figure=fig)
         ]
     )
